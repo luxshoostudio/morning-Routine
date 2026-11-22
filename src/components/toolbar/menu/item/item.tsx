@@ -6,6 +6,7 @@ import styles from './item.module.css';
 interface ItemProps {
   active?: boolean;
   disabled?: boolean;
+  external?: boolean;
   href?: string;
   icon: React.ReactElement;
   label: string;
@@ -16,6 +17,7 @@ interface ItemProps {
 export function Item({
   active,
   disabled = false,
+  external = true,
   href,
   icon,
   label,
@@ -29,7 +31,12 @@ export function Item({
       <Comp
         className={styles.item}
         disabled={disabled}
-        {...(href ? { href, target: '_blank' } : {})}
+        {...(href
+          ? {
+              href,
+              ...(external ? { rel: 'noreferrer', target: '_blank' } : {}),
+            }
+          : {})}
         {...(!href && active !== undefined ? { 'aria-pressed': active } : {})}
         aria-label={label}
       >
@@ -40,7 +47,7 @@ export function Item({
 
         {shortcut && <span className={styles.shortcut}>{shortcut}</span>}
 
-        {href && (
+        {href && external && (
           <span className={styles.external}>
             <FiExternalLink />
           </span>

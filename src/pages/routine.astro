@@ -1,0 +1,15 @@
+---
+import Layout from '@/layouts/layout.astro';
+
+import { Routine } from '@/components/routine';
+---
+
+<Layout
+  description="A hands-off morning routine that plays Moodist sound mixes on a fixed Pacific time schedule."
+  title="Morning Routine · Moodist"
+>
+  <script is:inline>
+    document.documentElement.style.colorScheme = 'dark';
+  </script>
+  <Routine client:load />
+</Layout>

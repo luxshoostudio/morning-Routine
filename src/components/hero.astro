@@ -31,6 +31,8 @@ const count = soundCount();
       </h1>
       <p class="desc">Free and open-source.</p>
 
+      <a class="routine" href="/routine">Morning Routine</a>
+
       <p class="sounds">
         <span aria-hidden="true" class="icon">
           <BsSoundwave />
@@ -145,6 +147,23 @@ const count = soundCount();
       font-size: var(--font-sm);
       line-height: 1.4;
       color: var(--color-on-image-subtle);
+    }
+
+    & .routine {
+      display: inline-flex;
+      align-items: center;
+      padding: 12px 22px;
+      margin-top: 22px;
+      font-size: var(--font-sm);
+      font-weight: 600;
+      color: #1c140c;
+      text-decoration: none;
+      background: #f4efe4;
+      border-radius: 999px;
+    }
+
+    & .routine:hover {
+      background: #fff;
     }
 
     & .sounds {

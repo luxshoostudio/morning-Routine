@@ -24,6 +24,7 @@ import {
   IsochronicItem,
   LofiItem,
   RadioItem,
+  MorningRoutineItem,
 } from './items';
 import { Divider } from './divider';
 import { ShareLinkModal } from '@/components/modals/share-link';
@@ -153,6 +154,7 @@ export function Menu() {
                     initial="hidden"
                     variants={variants}
                   >
+                    <MorningRoutineItem />
                     <PresetsItem open={() => open('presets')} />
                     <ShareItem open={() => open('shareLink')} />
                     <ShuffleItem />

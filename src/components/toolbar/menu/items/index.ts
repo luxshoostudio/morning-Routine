@@ -17,3 +17,4 @@ export { Binaural as BinauralItem } from './binaural';
 export { Isochronic as IsochronicItem } from './isochronic';
 export { Lofi as LofiItem } from './lofi';
 export { Radio as RadioItem } from './radio';
+export { MorningRoutine as MorningRoutineItem } from './morning-routine';

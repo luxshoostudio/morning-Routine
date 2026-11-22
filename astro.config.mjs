@@ -56,6 +56,7 @@ export default defineConfig({
         globPatterns: ['**/*'],
         maximumFileSizeToCacheInBytes: Number.MAX_SAFE_INTEGER,
         navigateFallback: '/',
+        navigateFallbackDenylist: [/^\/routine/],
       },
     }),
   ],
